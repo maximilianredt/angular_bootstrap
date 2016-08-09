@@ -1,3 +1,13 @@
 <div class="starter-template">
 	<h1>{{ 'APP_MAIN_WELCOME_MESSAGE' | translate}}</h1>
 </div>
+
+<div class="panel panel-default" ng-repeat="element in foo">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{ element.title }}</h3>
+	</div>
+	<div class="panel-body">
+		<p>{{ element.content }}</p>
+		<button type="button" class="btn btn-primary" ng-click="clickButton(element.id);">Click Me</button>
+	</div>
+</div>

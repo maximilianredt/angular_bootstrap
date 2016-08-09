@@ -13,7 +13,8 @@ angular.module('app.main', ['ui.router', 'oc.lazyLoad'])
 		controller: 'AppMainIndexCtrl',
 		resolve: {
 			loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
-				return $ocLazyLoad.load('app/main/ctrl/index.js');
+				$ocLazyLoad.load('app/main/services/Foo.js');
+				$ocLazyLoad.load('app/main/ctrl/index.js');
 			}]
 		}
 	});
